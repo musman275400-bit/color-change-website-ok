@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #37ca12, #00f2fe);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+
+h1 {
+  color: rgb(146, 44, 44);
+  margin-bottom: 20px;
+}
+
+
+input {
+  padding: 10px;
+  width: 220px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #102235;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #54c512;
+}
+
+
+ul {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+}
+
+
+li {
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+
+li:hover {
+  transform: scale(1.03);
+}
+    </style>
+</body>
+<script>
+    let head =document.createElement("h1")
+    head.textContent="TO Do List"
+    document.body.appendChild(head)
+    let input=document.createElement("input")
+    input.type="text"
+    document.body.appendChild(input)
+    let btn=document.createElement("button")
+    btn.textContent="ADD ➕"
+    document.body.appendChild(btn)
+    let list=document.createElement("ul")
+    document.body.append(list)
+    btn.addEventListener("click",()=>{
+        let li=document.createElement("li")
+        li.textContent=input.value
+        list.append(li)
+    })
+  
+</script>
+</html>
